@@ -20,8 +20,10 @@ language_dict = {
     "de": "Deutsch",
     "ja": "日本語",
     "pt": "português",
-    "ar": "العربية"
+    "ar": "العربية",
+    "chr": "ᏣᎳᎩ"
 }
+
 
 
 # Function to translate text using OpenAI
