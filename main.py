@@ -15,7 +15,7 @@ perplexity_api_key = os.getenv('PERPLEXITY_API_KEY')
 # Language dictionary for language codes to language names
 language_dict = {
     "zh-cn": "中文",
-    "en": "英语",
+    "en": "English",
     "es": "español",
     "fr": "français",
     "de": "Deutsch",
