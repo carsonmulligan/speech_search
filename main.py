@@ -81,19 +81,25 @@ if 'youtube_ids' not in st.session_state:
     st.session_state.youtube_ids = []
 if 'current_video_index' not in st.session_state:
     st.session_state.current_video_index = 0
+if 'query_count' not in st.session_state:
+    st.session_state.query_count = 0
 
 # Search button
 if st.button("Search Speeches"):
-    results = search_speeches(target_language, target_country)
-    st.write(f"Results for political speeches in {target_country} in {language_dict[target_language]}:")
-    youtube_ids = []
-    for choice in results:
-        video_url = choice['message']['content'].strip()
-        video_id = video_url.split('v=')[-1]
-        youtube_ids.append(video_id)
-        st.write(f"Video URL: {video_url}")
-        components.html(f'<iframe width="560" height="315" src="https://www.youtube.com/embed/{video_id}" frameborder="0" allowfullscreen></iframe>', height=315)
-        if len(youtube_ids) == 3:
-            break
-    st.session_state.youtube_ids = youtube_ids
-    st.session_state.current_video_index = 0
+    if st.session_state.query_count < 5:
+        results = search_speeches(target_language, target_country)
+        st.write(f"Results for political speeches in {target_country} in {language_dict[target_language]}:")
+        youtube_ids = []
+        for choice in results:
+            video_url = choice['message']['content'].strip()
+            video_id = video_url.split('v=')[-1]
+            youtube_ids.append(video_id)
+            st.write(f"Video URL: {video_url}")
+            components.html(f'<iframe width="560" height="315" src="https://www.youtube.com/embed/{video_id}" frameborder="0" allowfullscreen></iframe>', height=315)
+            if len(youtube_ids) == 3:
+                break
+        st.session_state.youtube_ids = youtube_ids
+        st.session_state.current_video_index = 0
+        st.session_state.query_count += 1
+    else:
+        st.warning("You have reached the limit of 5 queries.")
