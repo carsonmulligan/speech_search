@@ -2,7 +2,6 @@ import os
 import streamlit as st
 from openai import OpenAI
 import requests
-from dotenv import load_dotenv
 import streamlit.components.v1 as components
 
 # Load secrets from Streamlit's secrets management
@@ -11,13 +10,6 @@ perplexity_api_key = st.secrets["PERPLEXITY_API_KEY"]
 
 # Initialize OpenAI client
 client = OpenAI(api_key=openai_api_key)
-
-# Load environment variables from .env file
-load_dotenv()
-
-# Initialize OpenAI client
-client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
-perplexity_api_key = os.getenv('PERPLEXITY_API_KEY')
 
 # Language dictionary for language codes to language names
 language_dict = {
@@ -109,4 +101,4 @@ if st.button("Search Speeches"):
         st.session_state.current_video_index = 0
         st.session_state.query_count += 1
     else:
-        st.warning("You have reached the limit of 5 queries.")
+        st.warning("You have reached the limit of 5 queries. Please restart the app to make more queries.")
