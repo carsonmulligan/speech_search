@@ -69,7 +69,7 @@ def search_speeches(target_language, target_country):
         return []
 
 # Title of the app
-st.title("Political Speeches Finder")
+st.title("Target Language, Target Country, Complete Speeches Finder")
 
 # Input for language and country
 target_language = st.selectbox("Select Language", list(language_dict.keys()), format_func=lambda x: language_dict[x])
