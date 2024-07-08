@@ -103,4 +103,4 @@ if st.button("Search Speeches"):
         st.session_state.current_video_index = 0
         st.session_state.query_count += 1
     else:
-        st.warning("You have reached the limit of 5 queries. Please restart the app to make more queries.")
+        st.warning("You have reached the limit of 5 queries.")
