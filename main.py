@@ -57,7 +57,8 @@ def search_speeches(target_language, target_country):
         "Authorization": f"Bearer {perplexity_api_key}"
     }
     language_name = language_dict.get(target_language, target_language)
-    query = f"Return YouTube links with {language_name} speeches from leaders in {target_country}. Preferred longer than 20 minutes - complete speeches in {language_name}. Always return a valid YouTube link with ID."
+    query = f"Return YouTube links of complete speeches from {target_country} in {language_name}."
+    # query = f"Return YouTube links with {language_name} speeches from leaders in {target_country}. Preferred longer than 20 minutes - complete speeches in {language_name}. Always return a valid YouTube link with ID."
     translated_query = translate_text(query, target_language)
     payload = {
         "model": "llama-3-sonar-small-32k-online",
