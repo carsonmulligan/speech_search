@@ -5,8 +5,8 @@ import requests
 import streamlit.components.v1 as components
 
 # Load secrets from Streamlit's secrets management
-openai_api_key = st.secrets["OPENAI_API_KEY"]
-perplexity_api_key = st.secrets["PERPLEXITY_API_KEY"]
+openai_api_key = st.secrets["general"]["OPENAI_API_KEY"]
+perplexity_api_key = st.secrets["general"]["PERPLEXITY_API_KEY"]
 
 # Initialize OpenAI client
 client = OpenAI(api_key=openai_api_key)
