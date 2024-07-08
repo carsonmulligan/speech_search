@@ -21,8 +21,20 @@ language_dict = {
     "ja": "日本語",
     "pt": "português",
     "ar": "العربية",
-    "chr": "ᏣᎳᎩ"
+    "chr": "ᏣᎳᎩ",
+    "it": "italiano",
+    "ru": "русский",
+    "id": "Bahasa Indonesia",
+    "ms": "Bahasa Melayu",
+    "nv": "Diné bizaad (Navajo)",
+    "nah": "Nāhuatl (Mexico)",
+    "qu": "Runasimi (Quechua, Peru)",
+    "gn": "Avañe'ẽ (Guaraní, Paraguay)",
+    "yua": "Mayaʼ tʼàan (Yucatec Maya, Mexico)",
+    "ay": "Aymar aru (Aymara, Bolivia/Peru)",
+    "tup": "Tupí (Brazil)"
 }
+
 
 
 
