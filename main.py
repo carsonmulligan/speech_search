@@ -19,8 +19,10 @@ language_dict = {
     "fr": "français",
     "de": "Deutsch",
     "ja": "日本語",
-    "pt": "português"
+    "pt": "português",
+    "ar": "العربية"
 }
+
 
 # Function to translate text using OpenAI
 def translate_text(text, target_language):
