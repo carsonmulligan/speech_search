@@ -39,7 +39,7 @@ language_dict = {
 # Function to translate text using OpenAI
 def translate_text(text, target_language):
     response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4o-mini",
         messages=[
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": f"Translate the following text to {language_dict[target_language]}: {text}"}
