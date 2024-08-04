@@ -24,8 +24,13 @@ language_dict = {
     # "chr": "ᏣᎳᎩ",
     "it": "italiano",
     "ru": "русский",
-    "id": "Bahasa Indonesia",
-    "ms": "Bahasa Melayu",
+    # "id": "Bahasa Indonesia",
+    # The line `    "ms": "Bahasa Melayu",` in the `language_dict` dictionary is mapping the language
+    # code `"ms"` to the corresponding language name `"Bahasa Melayu"`. This allows for easy reference
+    # and translation between language codes and their respective names in the application. In this
+    # case, `"ms"` represents the language code for Malay, and `"Bahasa Melayu"` is the name of the
+    # language in Malay.
+    # "ms": "Bahasa Melayu",
     # "nv": "Diné bizaad (Navajo)",
     # "nah": "Nāhuatl (Mexico)",
     # "qu": "Runasimi (Quechua, Peru)",
