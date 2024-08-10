@@ -16,7 +16,7 @@ st.title("Ask GPT-4o-mini")
 user_question = st.text_input("Ask a question:")
 
 if st.button("Submit"):
-    with st.spinner("Getting response...."):
+    with st.spinner("Getting response....."):
         response = client.chat_completions.create(
             model="gpt-4o-mini",
             messages=[
